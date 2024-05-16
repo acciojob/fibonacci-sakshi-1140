@@ -1,21 +1,19 @@
 function fibonacci(num) {
-// your code here
-	//let ans
-	if(num===1) return 0
-	if(num===2) return 1
-		
-	else{
-		//let ans=fibonacci(num-1)+fibonacci(num-2)
-		let num1=0
-		let num2=1
-		let sum=0
-		for(let i=2;i<=num;i++){
-			sum=num2+num1;
-			num1=num2;
-			num2=sum
-		}
-	return sum
-	}
+    let num1 = 0;
+    let num2 = 1;
+    let sum;
+    if (num === 1) {
+        return num1;
+    } else if (num === 2) {
+        return num2;
+    } else {
+        for (let i = 3; i <= num; i++) {
+            sum = num1 + num2;
+            num1 = num2;
+            num2 = sum;
+        }
+        return num2;
+    }
 }
 
 module.exports = fibonacci;
